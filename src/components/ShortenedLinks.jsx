@@ -3,23 +3,24 @@ import { AppContext } from "../App";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default function ShortenedLinks() {
-  const { allUrls, handleCopy, submitForm, copied } = useContext(AppContext);
+  const { allUrls, handleCopy, submitForm, copied, urlError, url } =
+    useContext(AppContext);
 
   return (
     <div>
       <div>
         {submitForm && allUrls && (
           <div>
-            {allUrls.link.map((item) => (
-              <div key={item.firstInput}>
+            {allUrls.link.map((item, index) => (
+              <div key={index}>
                 <div className="ml-4 mb-4">
                   {item.firstInput && (
-                    <div className="border border-transparent w-72 flex flex-col items-start p-2 rounded-tl-md rounded-tr-md bg-white shadow-sm">
+                    <div className="border border-transparent w-72 flex flex-col items-start p-3 rounded-tl-md rounded-tr-md bg-white shadow-sm">
                       <span className="ml-2 font-bold">{item.firstInput}</span>
                     </div>
                   )}
                   {item.secondInput && (
-                    <div className="mt-0.5 border border-transparent w-72 flex flex-col items-start p-2 rounded-bl-md rounded-br-md bg-white shadow-sm">
+                    <div className="mt-0.5 border border-transparent w-72 flex flex-col items-start p-3 rounded-bl-md rounded-br-md bg-white shadow-sm h-28">
                       <a
                         style={{
                           color: "rgb(5, 202, 202)",
@@ -41,7 +42,7 @@ export default function ShortenedLinks() {
                                   backgroundColor: "rgb(5, 202, 202)",
                                   fontSize: "18px",
                                 }}
-                                className="border-transparent font-bold rounded-md w-64 ml-2 p-2 text-white hover:opacity-70 duration-300"
+                                className="border-transparent font-bold rounded-md w-64 ml-1 p-2 text-white hover:opacity-70 duration-300"
                               >
                                 Copy
                               </button>

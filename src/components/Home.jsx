@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <div>
       <div className="pt-10">
-        <div className="px-5">
-          <img src={homeImage} alt="" className="h-96" />
+        <div className="">
+          <img src={homeImage} alt="" className="h-96 ml-7 w-[100%]" />
         </div>
         <div>
           <div className="pt-8 flex flex-col justify-center items-center">

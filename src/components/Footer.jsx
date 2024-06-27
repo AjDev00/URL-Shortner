@@ -6,8 +6,9 @@ export default function Footer() {
     <div>
       <div className="bg-black opacity-90 text-white pt-10">
         <div className="flex flex-col justify-center items-center">
-          <div>
-            <Logo />
+          <div className="text-4xl font-bold">
+            {/* <Logo /> */}
+            Shortly
           </div>
           <div>
             <div className="font-bold flex flex-col justify-center items-center pt-10">
@@ -15,9 +16,15 @@ export default function Footer() {
                 Features
               </div>
               <ul className="font-semibold text-slate-300 flex flex-col items-center justify-center">
-                <li className="mb-1">Link Shortening</li>
-                <li className="mb-1">Branded Links</li>
-                <li className="mb-1">Analytics</li>
+                <li className="mb-1 duration-300 hover:text-white">
+                  Link Shortening
+                </li>
+                <li className="mb-1 duration-300 hover:text-white">
+                  Branded Links
+                </li>
+                <li className="mb-1 duration-300 hover:text-white">
+                  Analytics
+                </li>
               </ul>
             </div>
             <div className="font-bold flex flex-col justify-center items-center pt-10">
@@ -25,9 +32,11 @@ export default function Footer() {
                 Resources
               </div>
               <ul className="font-semibold text-slate-300 flex flex-col items-center justify-center">
-                <li className="mb-1">Developers</li>
-                <li className="mb-1">Blog</li>
-                <li className="mb-1">Support</li>
+                <li className="mb-1 duration-300 hover:text-white">
+                  Developers
+                </li>
+                <li className="mb-1 duration-300 hover:text-white">Blog</li>
+                <li className="mb-1 duration-300 hover:text-white">Support</li>
               </ul>
             </div>
             <div className="font-bold flex flex-col justify-center items-center pt-10">
@@ -35,10 +44,10 @@ export default function Footer() {
                 Company
               </div>
               <ul className="font-semibold text-slate-300 flex flex-col items-center justify-center">
-                <li className="mb-1">About</li>
-                <li className="mb-1">Our Team</li>
-                <li className="mb-1">Careers</li>
-                <li className="mb-1">Contact</li>
+                <li className="mb-1 duration-300 hover:text-white">About</li>
+                <li className="mb-1 duration-300 hover:text-white">Our Team</li>
+                <li className="mb-1 duration-300 hover:text-white">Careers</li>
+                <li className="mb-1 duration-300 hover:text-white">Contact</li>
               </ul>
             </div>
           </div>

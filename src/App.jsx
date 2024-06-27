@@ -37,6 +37,9 @@ function App() {
 
   function submitForm() {
     setSubmitUrl(submitUrl + 1);
+    if (url === "") {
+      setUrl("");
+    }
     // console.log(url);
     // console.log(submitUrl);
   }
@@ -54,6 +57,10 @@ function App() {
         data = await res.text();
         console.log(data);
         setUrl("");
+
+        if (url === "") {
+          setUrlError(urlError.message);
+        }
         setUrlError("");
       } catch (urlError) {
         setUrlError(urlError.message);

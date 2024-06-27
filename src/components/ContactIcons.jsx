@@ -8,16 +8,16 @@ export default function ContactIcons() {
     <div>
       <div className="flex flex-row gap-6">
         <div>
-          <FaFacebook size={30} />
+          <FaFacebook size={30} className="hover:scale-125 duration-200" />
         </div>
         <div>
-          <FaTwitter size={30} />
+          <FaTwitter size={30} className="hover:scale-125 duration-200" />
         </div>
         <div>
-          <FaPinterest size={30} />
+          <FaPinterest size={30} className="hover:scale-125 duration-200" />
         </div>
         <div>
-          <FaInstagram size={30} />
+          <FaInstagram size={30} className="hover:scale-125 duration-200" />
         </div>
       </div>
     </div>
