@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import About from "./About";
 import Shorten from "./Shorten";
 import ShortenButton from "./ShortenButton";
+import ShortenedLinks from "./ShortenedLinks";
+import { AppContext } from "../App";
 
 export default function LinkContainer() {
+  const { url, allUrls } = useContext(AppContext);
+
   return (
     <div>
       <div className="px-5 bg-slate-200">
@@ -10,6 +15,7 @@ export default function LinkContainer() {
           <Shorten />
           <ShortenButton />
         </div>
+        {<ShortenedLinks />}
         <div>
           <About />
         </div>
