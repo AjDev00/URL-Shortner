@@ -13,8 +13,19 @@ function App() {
   const [nav, setNav] = useState(false);
   const [url, setUrl] = useState("");
   const [submitUrl, setSubmitUrl] = useState(0);
-  const [allUrls, setAllUrls] = useState([]);
+  const [allUrls, setAllUrls] = useState({ link: [] });
   const [urlError, setUrlError] = useState("");
+
+  //copy links.
+  const [copied, setCopied] = useState(false);
+  function handleCopy() {
+    setCopied(true);
+
+    //after 3secs, reset.
+    setTimeout(() => {
+      setCopied(false);
+    }, 3000);
+  }
 
   function handleNavChange() {
     setNav(!nav);
@@ -26,31 +37,46 @@ function App() {
 
   function submitForm() {
     setSubmitUrl(submitUrl + 1);
-    console.log(url);
-    console.log(submitUrl);
+    // console.log(url);
+    // console.log(submitUrl);
   }
 
   useEffect(() => {
-    async function getShortenedUrl() {
+    async function getShortenedUrl(link) {
+      let data;
       try {
         const res = await fetch(
-          `https://tinyurl.com/api-create.php?url=${url}`
+          `https://tinyurl.com/api-create.php?url=${link}`
         );
         if (!res.ok) {
           throw Error("Please add a link...");
         }
-        const data = await res.text();
+        data = await res.text();
         console.log(data);
-        setAllUrls(data);
         setUrl("");
         setUrlError("");
       } catch (urlError) {
         setUrlError(urlError.message);
         // console.log(urlError.message);
       }
+
+      setAllUrls((prevUrl) => {
+        const newUrls = {
+          firstInput: url,
+          secondInput: data,
+          isCopied: false,
+          errMsg: urlError,
+        };
+
+        return {
+          ...prevUrl,
+          link: [...prevUrl.link, newUrls],
+        };
+      });
     }
 
-    getShortenedUrl();
+    getShortenedUrl(url);
+    // setUrl("");
   }, [submitUrl]);
 
   return (
@@ -64,6 +90,8 @@ function App() {
           submitForm,
           allUrls,
           urlError,
+          handleCopy,
+          copied,
         }}
       >
         <Header />

@@ -11,7 +11,7 @@ export default function LinkContainer() {
   return (
     <div>
       <div className="px-5 bg-slate-200">
-        <div className="bg-shortenBgImage bg-cover rounded-lg border border-transparent bg-blue-950 flex flex-col justify-center items-center py-8 gap-8 relative bottom-24">
+        <div className="bg-shortenBgImage bg-cover rounded-lg border border-transparent bg-blue-950 flex flex-col justify-center items-center py-8 gap-8 relative bottom-24 mb-[-70px]">
           <Shorten />
           <ShortenButton />
         </div>
