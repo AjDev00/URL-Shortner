@@ -1,4 +1,5 @@
 import homeImage from "../assets/images/illustration-working.svg";
+import { Link } from "react-scroll";
 
 export default function Home() {
   return (
@@ -23,12 +24,15 @@ export default function Home() {
             <div>links are performing.</div>
           </div>
           <div className="flex justify-center items-center pt-7 pb-56">
-            <button
+            <Link
+              to="Shorten"
+              smooth
+              duration={700}
               style={{ backgroundColor: "rgb(5, 202, 202)", fontSize: "18px" }}
-              className="border opacity-100 text-white p-4 px-10 rounded-full hover:opacity-70"
+              className="border opacity-100 text-white p-4 px-10 rounded-full hover:opacity-50 duration-300"
             >
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </div>

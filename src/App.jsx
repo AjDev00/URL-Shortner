@@ -16,17 +16,6 @@ function App() {
   const [allUrls, setAllUrls] = useState({ link: [] });
   const [urlError, setUrlError] = useState("");
 
-  //copy links.
-  const [copied, setCopied] = useState(false);
-  function handleCopy() {
-    setCopied(true);
-
-    //after 3secs, reset.
-    setTimeout(() => {
-      setCopied(false);
-    }, 3000);
-  }
-
   function handleNavChange() {
     setNav(!nav);
   }
@@ -97,8 +86,6 @@ function App() {
           submitForm,
           allUrls,
           urlError,
-          handleCopy,
-          copied,
         }}
       >
         <Header />

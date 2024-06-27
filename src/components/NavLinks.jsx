@@ -22,7 +22,7 @@ export default function NavLinks() {
           </div>
           <div
             style={{ backgroundColor: "rgb(5, 202, 202)" }}
-            className="border-transparent p-4 rounded-full w-72 flex justify-center items-center duration-300 hover:opacity-90"
+            className="border-transparent p-4 rounded-full w-72 flex justify-center items-center duration-300 hover:opacity-70"
           >
             Sign Up
           </div>

@@ -6,7 +6,7 @@ export default function Boost() {
         <div className="">
           <button
             style={{ backgroundColor: "rgb(5, 202, 202)", fontSize: "18px" }}
-            className="border-transparent text-white p-3 px-8 rounded-full hover:opacity-90"
+            className="border-transparent text-white p-3 px-8 rounded-full hover:opacity-70 duration-300"
           >
             Get Started
           </button>
