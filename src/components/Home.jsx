@@ -9,7 +9,7 @@ export default function Home() {
           <img
             src={homeImage}
             alt=""
-            className="h-96 ml-7 w-[100%] md:ml-20 md:h-[450px] md:w-[80%]"
+            className="h-96 px-5 w-[100%] md:ml-20 md:h-[450px] md:w-[80%]"
           />
         </div>
         <div className="md:flex flex-col md:justify-normal md:items-start">
@@ -30,7 +30,7 @@ export default function Home() {
             <div>get detailed insights on how your</div>
             <div>links are performing.</div>
           </div>
-          <div className="flex justify-center items-center pt-7 pb-56 md:pb-64">
+          <div className="flex justify-center items-center pt-7 pb-72 md:pb-64">
             <Link
               to="Shorten"
               smooth
