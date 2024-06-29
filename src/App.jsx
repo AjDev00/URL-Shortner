@@ -14,7 +14,7 @@ function App() {
   const [url, setUrl] = useState("");
   const [submitUrl, setSubmitUrl] = useState(0);
   const [allUrls, setAllUrls] = useState({ link: [] });
-  const [urlError, setUrlError] = useState("");
+  const [urlError, setUrlError] = useState(false);
 
   function handleNavChange() {
     setNav(!nav);
@@ -47,11 +47,12 @@ function App() {
         console.log(data);
         setUrl("");
 
-        if (url === "") {
-          setUrlError(urlError.message);
-        }
-        setUrlError("");
+        // if (url === "") {
+        //   setUrlError(urlError.message);
+        // }
+        setUrlError(false);
       } catch (urlError) {
+        setUrlError(true);
         setUrlError(urlError.message);
         // console.log(urlError.message);
       }
@@ -60,7 +61,7 @@ function App() {
         const newUrls = {
           firstInput: url,
           secondInput: data,
-          isCopied: false,
+          // isCopied: false,
           errMsg: urlError,
         };
 

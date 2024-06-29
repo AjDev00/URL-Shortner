@@ -9,7 +9,7 @@ export default function ShortenButton() {
       <div>
         <button
           style={{ backgroundColor: "rgb(5, 202, 202)", fontSize: "18px" }}
-          className="border-transparent p-3.5 font-bold rounded-md w-72 opacity-100 text-white hover:opacity-70 duration-300"
+          className="border-transparent p-3.5 font-bold rounded-md w-72 opacity-100 text-white hover:opacity-70 duration-300 md:w-60"
           onClick={submitForm}
         >
           Shorten It!

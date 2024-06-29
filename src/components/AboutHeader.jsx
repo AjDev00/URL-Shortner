@@ -12,9 +12,12 @@ export default function AboutHeader() {
           style={{ fontSize: "19px" }}
           className="text-slate-400 font-bold flex flex-col justify-center items-center px-8 ml-4"
         >
-          <div>
-            Track how your links are performing across the web with our advanced
-            statistics board.
+          <div className="md:flex md:flex-col md:justify-center md:items-center">
+            Track how your links are performing across the web with{" "}
+            <div className="hidden md:flex md:mt-[-30px]">
+              <br />
+            </div>{" "}
+            our advanced statistics board.
           </div>
         </div>
       </div>

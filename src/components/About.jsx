@@ -9,14 +9,16 @@ export default function About() {
       <div className="pb-24">
         <AboutHeader />
       </div>
-      <div>
-        <AboutFirstDetails />
-      </div>
-      <div>
-        <AboutSecondDetails />
-      </div>
-      <div className="pb-14">
-        <AboutThirdDetails />
+      <div className="md:flex flex-row">
+        <div>
+          <AboutFirstDetails />
+        </div>
+        <div>
+          <AboutSecondDetails />
+        </div>
+        <div className="pb-14">
+          <AboutThirdDetails />
+        </div>
       </div>
     </div>
   );

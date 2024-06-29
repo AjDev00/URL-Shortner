@@ -3,13 +3,13 @@ export default function NavLinks() {
     <div className="px-5 absolute top-20">
       <div className="bg-blue-950 text-white pt-5 font-semibold text-2xl rounded-lg w-80 shadow-xl">
         <div className="pb-5 flex flex-col justify-center items-center">
-          <div className="mb-8 opacity-70 hover:opacity-100 duration-200">
+          <div className="mb-8 opacity-70 hover:opacity-100 duration-200 cursor-pointer">
             Features
           </div>
-          <div className="mb-8 opacity-70 hover:opacity-100 duration-200">
+          <div className="mb-8 opacity-70 hover:opacity-100 duration-200 cursor-pointer">
             Pricing
           </div>
-          <div className="mb-8 opacity-70 hover:opacity-100 duration-200">
+          <div className="mb-8 opacity-70 hover:opacity-100 duration-200 cursor-pointer">
             Resources
           </div>
         </div>
@@ -17,12 +17,12 @@ export default function NavLinks() {
           <hr />
         </div>
         <div className="pb-10 flex flex-col justify-center items-center">
-          <div className="mb-8 opacity-70 hover:opacity-100 duration-200">
+          <div className="mb-8 opacity-70 hover:opacity-100 duration-200 cursor-pointer">
             Login
           </div>
           <div
             style={{ backgroundColor: "rgb(5, 202, 202)" }}
-            className="border-transparent p-4 rounded-full w-72 flex justify-center items-center duration-300 hover:opacity-70"
+            className="border-transparent p-4 rounded-full w-72 flex justify-center items-center duration-300 hover:opacity-70 cursor-pointer"
           >
             Sign Up
           </div>
