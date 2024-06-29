@@ -81,7 +81,7 @@ export default function ShortenedLinks() {
                           </span>
                         </span>
                       ) : (
-                        <div className="text-red-500 font-bold ml-2 mt-2">
+                        <div className="text-red-500 font-bold ml-2 mt-2 md:mt-0">
                           Oops unable to shorten link!
                         </div>
                       )}
