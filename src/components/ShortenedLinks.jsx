@@ -27,10 +27,10 @@ export default function ShortenedLinks() {
               <div key={index}>
                 <div className="ml-0 mb-4">
                   {item.firstInput && (
-                    <div className="border border-transparent w-80 flex flex-col items-start p-3 rounded-tl-md rounded-tr-md bg-white shadow-sm md:flex-row md:w-full md:rounded-md md:justify-between md:items-center md:px-10">
+                    <div className="border border-transparent w-full overflow-y-auto flex flex-col items-start p-3 rounded-tl-md rounded-tr-md bg-white shadow-sm md:flex-row md:w-full md:rounded-md md:justify-between md:items-center md:px-10">
                       <span
                         style={{ fontSize: "20px" }}
-                        className="ml-2 font-bold"
+                        className="ml-2 font-bold text-wrap"
                       >
                         {item.firstInput}
                       </span>
