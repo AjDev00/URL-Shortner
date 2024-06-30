@@ -91,7 +91,7 @@ export default function ShortenedLinks() {
                   {/* smaller screen. */}
                   <div className="md:hidden">
                     {item.secondInput && (
-                      <div className="mt-0.5 border border-transparent w-80 flex flex-col gap-3 items-start p-3 rounded-bl-md rounded-br-md bg-white shadow-sm h-32">
+                      <div className="mt-0.5 border border-transparent w-full flex flex-col gap-3 items-start p-3 rounded-bl-md rounded-br-md bg-white shadow-sm h-32">
                         <a
                           style={{
                             color: "rgb(5, 202, 202)",
